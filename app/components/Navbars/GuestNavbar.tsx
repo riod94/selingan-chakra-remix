@@ -48,7 +48,7 @@ export default function WithSubnavigation() {
         zIndex={1}
         style={{ opacity: 0.97 }}
       >
-        <Container maxW={"7xl"}>
+        <Container maxW={"6xl"}>
           <Flex align={"center"}>
             <Flex
               flex={{ base: 1, md: "auto" }}
