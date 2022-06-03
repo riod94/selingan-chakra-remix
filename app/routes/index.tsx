@@ -6,7 +6,7 @@ import { MotionBox } from "~/components/MotionBox";
 import Header from "~/components/Header";
 import GuestNavbar from "~/components/Navbars/GuestNavbar";
 import { AppLayout } from "~/layouts/AppLayout";
-import GridBlurredBackdrop from "~/components/Testimonials";
+import Testimonials from "~/components/Testimonials";
 
 export default function Index() {
   return (
@@ -15,7 +15,7 @@ export default function Index() {
       <SimpleThreeColumns />
       <TwoColumnWithLeftImage />
       <TwoColumnWithRightImage />
-      <GridBlurredBackdrop />
+      <Testimonials />
       {/* <MotionBox
         height="10px"
         bg="brand.300"
