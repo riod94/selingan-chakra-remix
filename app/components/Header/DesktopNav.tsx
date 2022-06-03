@@ -69,13 +69,13 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
         display={"block"}
         p={2}
         rounded={"md"}
-        _hover={{ bg: useColorModeValue("green.50", "gray.900") }}
+        _hover={{ bg: useColorModeValue("brand.50", "gray.900") }}
       >
         <Stack direction={"row"} align={"center"}>
           <Box>
             <Text
               transition={"all .3s ease"}
-              _groupHover={{ color: "green.400" }}
+              _groupHover={{ color: "brand.400" }}
               fontWeight={500}
             >
               {label}
@@ -91,7 +91,7 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
             align={"center"}
             flex={1}
           >
-            <Icon color={"green.400"} w={5} h={5} as={ChevronRightIcon} />
+            <Icon color={"brand.400"} w={5} h={5} as={ChevronRightIcon} />
           </Flex>
         </Stack>
       </Link>

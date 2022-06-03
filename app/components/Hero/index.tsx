@@ -28,11 +28,11 @@ export default function Hero() {
   }, []);
 
   return (
-    <Container maxW={"7xl"}>
+    <Container maxW={"6xl"}>
       <Stack
         align={"center"}
-        spacing={{ base: 8, md: 10 }}
-        py={{ base: 20, md: 28 }}
+        spacing={8}
+        py={20}
         direction={{ base: "column", md: "row" }}
       >
         <Stack flex={1} spacing={{ base: 5, md: 10 }} mt={{ base: 25, md: 40 }} mb={{base:20, md:28}}>

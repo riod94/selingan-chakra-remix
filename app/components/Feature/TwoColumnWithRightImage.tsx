@@ -45,7 +45,7 @@ const blurBackground = `url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org
 
 export default function TwoColumnWithRightImage() {
   return (
-    <Container maxW={"7xl"} py={12}>
+    <Container maxW={"6xl"} py={12}>
       <SimpleGrid
         columns={{ base: 1, md: 2 }}
         spacing={10}

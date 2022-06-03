@@ -19,6 +19,7 @@ interface MobileNavProps {
 }
 
 export const MobileNav = ({ isOpen }: MobileNavProps) => {
+  const bgColor = useColorModeValue("white", "gray.800")
   if (!isOpen) return null;
 
   return (
@@ -29,11 +30,10 @@ export const MobileNav = ({ isOpen }: MobileNavProps) => {
       pos="fixed"
       top="60px"
       w={"full"}
-      bg={"white"}
+      bgColor={bgColor}
       minH={"calc(100vh - 60px)"}
       css={{
         backdropFilter: "saturate(180%) blur(5px)",
-        backgroundColor: useColorModeValue("white", "gray.800"),
       }}
     >
       {NAV_ITEMS.map((navItem) => (

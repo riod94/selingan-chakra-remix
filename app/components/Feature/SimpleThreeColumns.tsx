@@ -1,4 +1,4 @@
-import { ReactElement } from "react";
+import { type ReactElement } from "react";
 import {
   Box,
   SimpleGrid,
@@ -50,7 +50,7 @@ const Feature = ({ title, text, icon }: FeatureProps) => {
 export default function SimpleThreeColumns() {
   return (
     <Box backgroundColor={ useColorModeValue("gray.50", "gray.900")}>
-      <Container maxW={"7xl"}>
+      <Container maxW={"6xl"}>
         <Stack
           align={"center"}
           spacing={{ base: 8, md: 10 }}
