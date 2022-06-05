@@ -6,7 +6,6 @@ import {
   useDisclosure,
   IconButton,
   useColorModeValue,
-  Icon,
   useColorMode,
   Link,
   Text,
@@ -69,7 +68,6 @@ const Header = () => {
           >
             <Link href={"/"}>
               <Stack
-                as={"a"}
                 direction={"row"}
                 alignItems={"center"}
                 spacing={{ base: 2, sm: 4 }}

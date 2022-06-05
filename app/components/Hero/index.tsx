@@ -14,6 +14,7 @@ import {
   ScaleFade,
   SlideFade,
 } from "@chakra-ui/react";
+import { Link } from "@remix-run/react";
 import { useEffect } from "react";
 import BlurBackground from "../BlurBackground";
 
@@ -35,7 +36,7 @@ export default function Hero() {
         py={20}
         direction={{ base: "column", md: "row" }}
       >
-        <Stack flex={1} spacing={{ base: 5, md: 10 }} mt={{ base: 25, md: 40 }} mb={{base:20, md:28}}>
+        <Stack flex={1} spacing={{ base: 5, md: 10 }} mt={{ base: 24, md: 40 }} mb={{ base: 20, md: 24 }}>
           <ScaleFade initialScale={0.6} in={isOpen}>
             <Heading
               lineHeight={1.1}
@@ -68,7 +69,7 @@ export default function Hero() {
             </Heading>
           </ScaleFade>
           <ScaleFade in={isOpen} initialScale={0.9} delay={0.1}>
-            <Text color={"gray.500"}>
+            <Text color={useColorModeValue("gray.600", "gray.500")}>
               Selingan is a landing page template built using Remix + Chakra UI.
               You can modify and use it for your commercial website for free. In
               hac habitasse platea dictumst quisque sagittis. Convallis tellus
@@ -81,28 +82,32 @@ export default function Hero() {
             direction={{ base: "column", sm: "row" }}
           >
             <ScaleFade in={isOpen} initialScale={0.3} delay={0.3}>
-              <Button
-                rounded={"full"}
-                size={"lg"}
-                fontWeight={"normal"}
-                px={6}
-                colorScheme={"brand"}
-                bg={"brand.400"}
-                _hover={{ bg: "brand.500" }}
-              >
-                Get started
-              </Button>
+              <Link to={"#whyChooseUs"}>
+                <Button
+                  rounded={"full"}
+                  size={"lg"}
+                  fontWeight={"normal"}
+                  px={6}
+                  colorScheme={"brand"}
+                  bg={"brand.400"}
+                  _hover={{ bg: "brand.500" }}
+                >
+                  Get started
+                </Button>
+              </Link>
             </ScaleFade>
             <ScaleFade in={isOpen} initialScale={0.4} delay={0.4}>
-              <Button
-                rounded={"full"}
-                size={"lg"}
-                fontWeight={"normal"}
-                px={6}
-                leftIcon={<PlayIcon h={4} w={4} color={"gray.300"} />}
-              >
-                How It Works
-              </Button>
+              <Link to={"#howWeWork"}>
+                <Button
+                  rounded={"full"}
+                  size={"lg"}
+                  fontWeight={"normal"}
+                  px={6}
+                  leftIcon={<PlayIcon h={4} w={4} color={"gray.300"} />}
+                >
+                  How It Works
+                </Button>
+              </Link>
             </ScaleFade>
           </Stack>
         </Stack>
@@ -117,7 +122,7 @@ export default function Hero() {
             <BlurBackground
               position={"absolute"}
               top={-10}
-              right={-10}
+              right={5}
               style={{ filter: "blur(90px)" }}
             />
           </Fade>

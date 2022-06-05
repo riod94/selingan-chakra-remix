@@ -1,6 +1,4 @@
 import {
-    CONTRIBUTE_LINK,
-    DISCORD_INVITE_LINK,
     GITHUB_LINK,
 } from '../../contants';
 
@@ -69,15 +67,23 @@ export const NAV_ITEMS: Array<NavItem> = [
         })),
     },
     {
-        label: 'Contribute',
-        href: CONTRIBUTE_LINK,
+        label: 'Portfolio',
+        href: '#portfolio',
+    },
+    {
+        label: 'Testimonials',
+        href: '#testimonials',
+    },
+    {
+        label: 'Contact Us',
+        href: '#contactUs',
+    },
+    {
+        label: 'FAQ',
+        href: '#faq',
     },
     {
         label: 'GitHub',
         href: GITHUB_LINK,
-    },
-    {
-        label: 'Discord',
-        href: DISCORD_INVITE_LINK,
     },
 ];

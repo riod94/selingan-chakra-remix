@@ -15,7 +15,7 @@ import {
   IoLogoApple,
   IoLogoWebComponent,
 } from "react-icons/io5";
-import { ReactElement } from "react";
+import { type ReactElement } from "react";
 
 interface FeatureProps {
   text: string;
@@ -45,28 +45,16 @@ const blurBackground = `url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org
 
 export default function TwoColumnWithRightImage() {
   return (
-    <Container maxW={"6xl"} py={12}>
+    <Container id="whatWeBuild" maxW={"6xl"}>
       <SimpleGrid
         columns={{ base: 1, md: 2 }}
         spacing={10}
         py={{ base: 20, md: 28 }}
-        pt={{ base: 8, md: 10 }}
+      // pt={{ base: 8, md: 10 }}
       >
         <Stack spacing={4} alignContent="center">
-          {/* <Text
-            textTransform={"uppercase"}
-            color={"blue.400"}
-            fontWeight={600}
-            fontSize={"sm"}
-            bg={useColorModeValue("blue.50", "blue.900")}
-            p={2}
-            alignSelf={"flex-start"}
-            rounded={"md"}
-          >
-            Our Story
-          </Text> */}
-          <Heading>What we build</Heading>
-          <Text color={"gray.600"}>
+          <Heading>What We Build</Heading>
+          <Text color={useColorModeValue("gray.600", "gray.500")}>
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor invidunt ut labore
           </Text>
@@ -84,7 +72,7 @@ export default function TwoColumnWithRightImage() {
               text={"Android Apps"}
             />
             <Feature
-              icon={<Icon as={IoLogoApple} color={"gray.500"} w={5} h={5} />}
+              icon={<Icon as={IoLogoApple} color={useColorModeValue("gray.600", "gray.500")} w={5} h={5} />}
               iconBg={useColorModeValue("gray.100", "gray.900")}
               text={"Ios Apps"}
             />

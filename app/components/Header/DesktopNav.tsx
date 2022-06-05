@@ -17,6 +17,10 @@ import { NAV_ITEMS } from "./navData";
 import type { NavItem } from "./navData";
 
 export const DesktopNav = (props: BoxProps) => {
+  let popOverColor = useColorModeValue("gray.600", "gray.200")
+  let popOverHoverColor = useColorModeValue("gray.800", "white")
+  let bgPopOverContent = useColorModeValue("white", "gray.800")
+
   return (
     <Stack direction={"row"} spacing={4} {...props}>
       {NAV_ITEMS.map((navItem) => (
@@ -28,10 +32,10 @@ export const DesktopNav = (props: BoxProps) => {
                 href={navItem.href ?? "#"}
                 fontSize={"sm"}
                 fontWeight={500}
-                color={useColorModeValue("gray.600", "gray.200")}
+                color={popOverColor}
                 _hover={{
                   textDecoration: "none",
-                  color: useColorModeValue("gray.800", "white"),
+                  color: popOverHoverColor,
                 }}
               >
                 {navItem.label}
@@ -42,7 +46,7 @@ export const DesktopNav = (props: BoxProps) => {
               <PopoverContent
                 border={0}
                 boxShadow={"xl"}
-                bg={useColorModeValue("white", "gray.800")}
+                bg={bgPopOverContent}
                 p={4}
                 rounded={"xl"}
                 minW={"sm"}
@@ -63,38 +67,37 @@ export const DesktopNav = (props: BoxProps) => {
 
 const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
   return (
-    <Link href={href!}>
-      <Link
-        role={"group"}
-        display={"block"}
-        p={2}
-        rounded={"md"}
-        _hover={{ bg: useColorModeValue("brand.50", "gray.900") }}
-      >
-        <Stack direction={"row"} align={"center"}>
-          <Box>
-            <Text
-              transition={"all .3s ease"}
-              _groupHover={{ color: "brand.400" }}
-              fontWeight={500}
-            >
-              {label}
-            </Text>
-            <Text fontSize={"sm"}>{subLabel}</Text>
-          </Box>
-          <Flex
+    <Link 
+      href={href!}
+      role={"group"}
+      display={"block"}
+      p={2}
+      rounded={"md"}
+      _hover={{ bg: useColorModeValue("brand.50", "gray.900") }}
+    >
+      <Stack direction={"row"} align={"center"}>
+        <Box>
+          <Text
             transition={"all .3s ease"}
-            transform={"translateX(-10px)"}
-            opacity={0}
-            _groupHover={{ opacity: "100%", transform: "translateX(0)" }}
-            justify={"flex-end"}
-            align={"center"}
-            flex={1}
+            _groupHover={{ color: "brand.400" }}
+            fontWeight={500}
           >
-            <Icon color={"brand.400"} w={5} h={5} as={ChevronRightIcon} />
-          </Flex>
-        </Stack>
-      </Link>
+            {label}
+          </Text>
+          <Text fontSize={"sm"}>{subLabel}</Text>
+        </Box>
+        <Flex
+          transition={"all .3s ease"}
+          transform={"translateX(-10px)"}
+          opacity={0}
+          _groupHover={{ opacity: "100%", transform: "translateX(0)" }}
+          justify={"flex-end"}
+          align={"center"}
+          flex={1}
+        >
+          <Icon color={"brand.400"} w={5} h={5} as={ChevronRightIcon} />
+        </Flex>
+      </Stack>
     </Link>
   );
 };

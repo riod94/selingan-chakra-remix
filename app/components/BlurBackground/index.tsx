@@ -1,8 +1,9 @@
-import { Icon, IconProps, useBreakpointValue } from "@chakra-ui/react";
+import { type IconProps } from "@chakra-ui/react";
+import { Icon, useBreakpointValue } from "@chakra-ui/react";
 
 const BlurBackground = (props: IconProps) => {
-    const height = props.height || "560px"
-    console.log(height)
+  const height = props.height || "560px"
+
   return (
     <Icon
       width={useBreakpointValue({ base: "100%", md: "40vw", lg: "30vw" })}

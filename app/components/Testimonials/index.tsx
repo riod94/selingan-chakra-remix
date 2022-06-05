@@ -13,36 +13,36 @@ import DefaultCarousel from "../Carousel";
 
 const data = [
   {
-    name: "Brandon P.",
-    role: "Chief Marketing Officer",
+    name: "Patrick W",
+    role: "Director, Bubble Inc",
     content:
-      "It really saves me time and effort. It is exactly what our business has been lacking. EEZY is the most valuable business resource we have EVER purchased. After using EEZY my business skyrocketed!",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempus urna et pharetra pharetra massa massa ultricies mi quis.",
     avatar:
-      "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80",
+      "https://images.unsplash.com/flagged/photo-1573740144655-bbb6e88fb18a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80",
   },
   {
-    name: "Krysta B.",
-    role: "Entrepreneur",
+    name: "Alicia F.",
+    role: "CMO, Enterpriceless",
     content:
-      "I didn't even need training. We've used EEZY for the last five years. I have gotten at least 50 times the value from EEZY. I made back the purchase price in just 48 hours!",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla aliquet enim tortor at auctor urna nunc id.",
     avatar:
-      "https://images.unsplash.com/photo-1598550874175-4d0ef436c909?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80",
+      "https://images.unsplash.com/photo-1594579254798-868734c3ed32?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=783&q=80",
   },
   {
-    name: "Darcy L.",
-    role: "Movie star",
+    name: "Hannah B.",
+    role: "Director, Movie star",
     content:
-      "Thank you for making it painless, pleasant and most of all, hassle free! I'm good to go. No matter where you go, EEZY is the coolest, most happening thing around! I love EEZY!",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Et pharetra pharetra massa massa ultricies.",
     avatar:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=334&q=80",
+      "https://images.unsplash.com/photo-1499887142886-791eca5918cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
   },
   {
-    name: "Daniel T.",
-    role: "Musician",
+    name: "Daniel N.",
+    role: "Founder, PASN",
     content:
-      "I am so pleased with this product. EEZY is both attractive and highly adaptable. Without EEZY, we would have gone bankrupt by now. Thank you for creating this product!",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Faucibus nisl tincidunt eget nullam non nisi.",
     avatar:
-      "https://images.unsplash.com/photo-1606513542745-97629752a13b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80",
+      "https://images.unsplash.com/photo-1543965860-82ed7d542cc4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80",
   },
 ];
 
@@ -113,7 +113,7 @@ const TestimonialCard = (props: TestimonialCardProps) => {
           </chakra.p>
           <chakra.p fontWeight={"bold"} fontSize={14}>
             {name}
-            <chakra.span fontWeight={"medium"} color={"gray.500"}>
+            <chakra.span fontWeight={"medium"} color={useColorModeValue("gray.600", "gray.500")}>
               {" "}
               - {role}
             </chakra.span>
@@ -133,7 +133,7 @@ const TestimonialCard = (props: TestimonialCardProps) => {
 
 export default function Testimonials() {
   return (
-    <Box backgroundColor={useColorModeValue("gray.50", "gray.900")}>
+    <Box id="testimonials" backgroundColor={useColorModeValue("gray.50", "gray.900")}>
       <Container maxW={"6xl"}>
         <Flex
           textAlign={"center"}
@@ -143,7 +143,7 @@ export default function Testimonials() {
           pt={{ base: 20, md: 28 }}
         >
           <Box width={{ base: "full", sm: "lg", lg: "xl" }} margin={"auto"}>
-            <Heading py={5}>People <Icon viewBox="0 0 40 35" boxSize={10} color={"purple.400"}>
+            <Heading py={5}>Our Clients <Icon viewBox="0 0 40 35" boxSize={10} color={"purple.400"}>
               <path
                 fill={"currentColor"}
                 d="M10.7964 5.04553e-07C8.66112 -0.000123335 6.57374 0.632971 4.79827 1.81922C3.0228 3.00547 1.63898 4.69158 0.82182 6.66433C0.00466116 8.63708 -0.209132 10.8079 0.207477 12.9021C0.624087 14.9964 1.65239 16.9201 3.16233 18.4299L19.1153 34.3828C19.2395 34.5074 19.3871 34.6062 19.5496 34.6736C19.7121 34.741 19.8863 34.7757 20.0622 34.7757C20.2381 34.7757 20.4123 34.741 20.5748 34.6736C20.7373 34.6062 20.8848 34.5074 21.0091 34.3828L36.962 18.4272C38.9319 16.3917 40.0228 13.6636 39.9996 10.8311C39.9764 7.99858 38.8409 5.28867 36.838 3.28573C34.835 1.28279 32.1251 0.147283 29.2926 0.124081C26.4601 0.100879 23.732 1.19184 21.6965 3.1617L20.0622 4.79337L18.4305 3.1617C17.4276 2.15892 16.237 1.36356 14.9267 0.821064C13.6163 0.278568 12.2119 -0.000433066 10.7937 5.04553e-07H10.7964Z"
@@ -157,9 +157,9 @@ export default function Testimonials() {
             >
               See why over{" "}
               <chakra.strong color={useColorModeValue("gray.700", "gray.50")}>
-                150,000+
+                999+
               </chakra.strong>{" "}
-              influencers use EEZY to manage their social media content!
+              Startup use Selingan to make their App and Web!
             </chakra.h2>
           </Box>
           <DefaultCarousel>

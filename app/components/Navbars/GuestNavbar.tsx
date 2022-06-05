@@ -35,7 +35,7 @@ export default function WithSubnavigation() {
     <Box>
       <Flex
         bg={useColorModeValue("white", "gray.800")}
-        color={useColorModeValue("gray.600", "white")}
+        color={useColorModeValue("gray.500", "white")}
         minH={"60px"}
         py={{ base: 2 }}
         // px={{ base: 4 }}
@@ -111,17 +111,15 @@ export default function WithSubnavigation() {
               >
                 {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
               </Button>
-              <Button
-                as={"a"}
+              {/* <Button
                 fontSize={"sm"}
                 fontWeight={600}
                 variant={"ghost"}
                 colorScheme={"purple"}
                 rounded={"full"}
-                href={"#"}
               >
                 Sign In
-              </Button>
+              </Button> */}
               {/* <Button
                 display={{ base: "none", md: "inline-flex" }}
                 fontSize={"sm"}
@@ -148,7 +146,7 @@ export default function WithSubnavigation() {
 }
 
 const DesktopNav = () => {
-  const linkColor = useColorModeValue("gray.600", "brand.50");
+  const linkColor = useColorModeValue("gray.500", "brand.50");
   const linkBgHoverColor = useColorModeValue("brand.50", "gray.900");
   const popoverContentBgColor = useColorModeValue("white", "gray.800");
 
@@ -291,32 +289,35 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
 
   return (
     <Stack spacing={4} onClick={children && onToggle}>
-      <Flex
-        py={2}
-        as={Link}
+      <Link
         href={href ?? "#"}
-        justify={"space-between"}
-        align={"center"}
-        _hover={{
-          textDecoration: "none",
-        }}
       >
-        <Text
-          fontWeight={600}
-          color={useColorModeValue("gray.600", "gray.200")}
+        <Flex
+          py={2}
+          // as={Link}
+          justify={"space-between"}
+          align={"center"}
+          _hover={{
+            textDecoration: "none",
+          }}
         >
-          {label}
-        </Text>
-        {children && (
-          <Icon
-            as={ChevronDownIcon}
-            transition={"all .25s ease-in-out"}
-            transform={isOpen ? "rotate(180deg)" : ""}
-            w={6}
-            h={6}
-          />
-        )}
-      </Flex>
+          <Text
+            fontWeight={600}
+            color={useColorModeValue("gray.500", "gray.200")}
+          >
+            {label}
+          </Text>
+          {children && (
+            <Icon
+              as={ChevronDownIcon}
+              transition={"all .25s ease-in-out"}
+              transform={isOpen ? "rotate(180deg)" : ""}
+              w={6}
+              h={6}
+            />
+          )}
+        </Flex>
+      </Link>
 
       <Collapse in={isOpen} animateOpacity style={{ marginTop: "0!important" }}>
         <Stack

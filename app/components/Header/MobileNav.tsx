@@ -19,7 +19,11 @@ interface MobileNavProps {
 }
 
 export const MobileNav = ({ isOpen }: MobileNavProps) => {
-  const bgColor = useColorModeValue("white", "gray.800")
+  let bgColor = useColorModeValue(
+    "rgba(255, 255, 255, 0.8)",
+    "rgba(26, 32, 44, 0.8)"
+  )
+
   if (!isOpen) return null;
 
   return (
@@ -30,10 +34,10 @@ export const MobileNav = ({ isOpen }: MobileNavProps) => {
       pos="fixed"
       top="60px"
       w={"full"}
-      bgColor={bgColor}
       minH={"calc(100vh - 60px)"}
       css={{
         backdropFilter: "saturate(180%) blur(5px)",
+        backgroundColor: bgColor,
       }}
     >
       {NAV_ITEMS.map((navItem) => (
@@ -55,32 +59,35 @@ const MobileNavItem = ({ href, children, label }: NavItem) => {
 
   return (
     <Stack spacing={4} onClick={handleToggle}>
-      <Flex
-        py={2}
-        as={Link}
+      <Link
         href={href ?? "#"}
-        justify={"space-between"}
-        align={"center"}
-        _hover={{
-          textDecoration: "none",
-        }}
       >
-        <Text
-          fontWeight={600}
-          color={useColorModeValue("gray.600", "gray.200")}
+        <Flex
+          py={2}
+          // as={Link}
+          justify={"space-between"}
+          align={"center"}
+          _hover={{
+            textDecoration: "none",
+          }}
         >
-          {label}
-        </Text>
-        {children && (
-          <Icon
-            as={ChevronDownIcon}
-            transition={"all .25s ease-in-out"}
-            transform={isOpen ? "rotate(180deg)" : ""}
-            w={6}
-            h={6}
-          />
-        )}
-      </Flex>
+          <Text
+            fontWeight={600}
+            color={useColorModeValue("gray.500", "gray.200")}
+          >
+            {label}
+          </Text>
+          {children && (
+            <Icon
+              as={ChevronDownIcon}
+              transition={"all .25s ease-in-out"}
+              transform={isOpen ? "rotate(180deg)" : ""}
+              w={6}
+              h={6}
+            />
+          )}
+        </Flex>
+      </Link>
 
       <Collapse in={isOpen} animateOpacity style={{ marginTop: "0!important" }}>
         <Stack

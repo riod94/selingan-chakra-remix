@@ -11,7 +11,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { IoAnalytics, IoSearch, IoBuild, IoPaperPlane } from "react-icons/io5";
-import { ReactElement } from "react";
+import { type ReactElement } from "react";
 
 interface FeatureProps {
   text: string;
@@ -40,12 +40,12 @@ const Feature = ({ text, icon, iconBg }: FeatureProps) => {
 const blurBackground = `url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' width='560' height='185' viewBox='0 0 560 185' fill='none'%3E%3Cellipse cx='457.367' cy='123.926' rx='102.633' ry='61.0737' transform='rotate(-180 457.367 123.926)' fill='%23ED8936'/%3E%3Cellipse cx='160.427' cy='61.0737' rx='102.633' ry='61.0737' transform='rotate(-180 160.427 61.0737)' fill='%2348BB78'/%3E%3Cellipse cx='193.808' cy='111.771' rx='193.808' ry='73.2292' transform='rotate(-180 193.808 111.771)' fill='%230BC5EA'/%3E%3Cellipse cx='337.295' cy='74.415' rx='193.808' ry='73.2292' transform='rotate(-180 337.295 74.415)' fill='%23ED64A6'/%3E%3C/svg%3E")`;
 export default function TwoColumnWithLeftImage() {
   return (
-    <Container maxW={"6xl"} py={12}>
+    <Container id="howWeWork" maxW={"6xl"}>
       <SimpleGrid
         columns={{ base: 1, md: 2 }}
         spacing={10}
         py={{ base: 20, md: 28 }}
-        pb={{ base: 8, md: 10 }}
+        // pb={{ base: 8, md: 10 }}
       >
         <Flex
           maxW={"560px"}
@@ -89,20 +89,8 @@ export default function TwoColumnWithLeftImage() {
           />
         </Flex>
         <Stack spacing={4} alignContent="center">
-          {/* <Text
-            textTransform={"uppercase"}
-            color={"blue.400"}
-            fontWeight={600}
-            fontSize={"sm"}
-            bg={useColorModeValue("blue.50", "blue.900")}
-            p={2}
-            alignSelf={"flex-start"}
-            rounded={"md"}
-          >
-            Our Story
-          </Text> */}
-          <Heading>How we works</Heading>
-          <Text color={"gray.600"}>
+          <Heading>How We Works</Heading>
+          <Text color={useColorModeValue("gray.600", "gray.500")}>
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
             nonumy eirmod tempor invidunt ut labore
           </Text>

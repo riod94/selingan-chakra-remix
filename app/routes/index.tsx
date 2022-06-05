@@ -7,14 +7,16 @@ import Header from "~/components/Header";
 import GuestNavbar from "~/components/Navbars/GuestNavbar";
 import { AppLayout } from "~/layouts/AppLayout";
 import Testimonials from "~/components/Testimonials";
+import Portfolio from "~/components/Portfolio";
 
 export default function Index() {
   return (
     <AppLayout>
       <Hero />
       <SimpleThreeColumns />
-      <TwoColumnWithLeftImage />
       <TwoColumnWithRightImage />
+      <TwoColumnWithLeftImage />
+      <Portfolio />
       <Testimonials />
       {/* <MotionBox
         height="10px"
